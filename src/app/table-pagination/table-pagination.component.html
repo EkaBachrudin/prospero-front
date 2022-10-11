@@ -1,0 +1,39 @@
+<table class="table  table-striped">
+    <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Tahun</th>
+      <th scope="col">RTU</th>
+      <th scope="col">Draft</th>
+      <th scope="col">Menunggu</th>
+      <th scope="col">Disetujui</th>
+      <th scope="col">Ditolak</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let mr of mr">
+      <th scope="row">{{ mr.id }}</th>
+      <td>{{ mr.tahun }}   </td>
+      <td>{{ mr.rtu }}   </td>
+      <td>{{ mr.draft }}   </td>
+      <td>{{ mr.menunggu }}   </td>
+      <td>{{ mr.disetujui }}   </td>
+      <td>{{ mr.ditolak }}   </td>
+      <th class="pr-5">
+        <select id='peeps' name='people' class="border border-0">
+          <option value=""></option>
+            <option *ngFor="let item of data" [value]="item.name">
+              {{item.name}}
+            </option>    
+        </select>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+  
+  <div class="d-flex justify-content-between p-2">
+    
+  
+    
+  </div>
